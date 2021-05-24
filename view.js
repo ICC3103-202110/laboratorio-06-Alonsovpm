@@ -33,13 +33,13 @@ function inputForm(model){
     const message2 = 'Temperature value to convert? '
     return inquirer.prompt([
         {
-            name: 'input1',
-            type: 'input',
+            name: 'source',
+            type: 'confirm',
             message: message1,
             default: input1,
         },
         {
-            name: 'input2',
+            name: 'value',
             type: 'input',
             message: message2,
             default: input2,
@@ -53,14 +53,14 @@ function listForm(model){
     const choices = ['Celsius','Fahrenheit','Kelvin']
     return inquirer.prompt([
         {
-            name: 'input3',
+            name: 'from',
             type: 'list',
             message: message1,
             default: input3,
             choices: choices
         },
         {
-            name: 'input4',
+            name: 'to',
             type: 'list',
             message: message2,
             default: input4,
